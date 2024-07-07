@@ -1,2 +1,5 @@
 Manifest.toml
 *.swp
+.mp4
+ecosystem/
+promo/
