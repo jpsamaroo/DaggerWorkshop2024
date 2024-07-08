@@ -1,6 +1,7 @@
 # Use packages from this notebook's project
 using Pkg
 Pkg.activate(pwd())
+Pkg.instantiate()
 
 using Distributed
 @info "Your Julia is running with $(Threads.nthreads()) threads"
@@ -39,6 +40,9 @@ end
     using GraphViz, Plots, DataFrames
     using Colors, ColorSchemes
     using Statistics, StatsBase
+    import Images, ImageFiltering
+    import FileIO
+    using LinearAlgebra
 
     # Load some demo packages
     using OrdinaryDiffEq

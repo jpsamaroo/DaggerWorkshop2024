@@ -1,6 +1,6 @@
 # Workshop Utilities
 
-workshop_colors = colorschemes[:tab10]
+workshop_colors = colorschemes[:tab20]
 
 function workshop_plots(f; dag=true, gantt=true)
     Dagger.enable_logging!(;
