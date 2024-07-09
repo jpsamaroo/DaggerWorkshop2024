@@ -5,7 +5,6 @@ Pkg.instantiate()
 
 using Distributed
 @info "Your Julia is running with $(Threads.nthreads()) threads"
-#= FIXME: Enable me
 if nprocs() == 1
     # Let's start up some local workers
     if VERSION >= v"1.11-"
@@ -28,7 +27,6 @@ if nprocs() > 1
         Pkg.activate(pwd())
     end
 end
-=#
 
 @everywhere begin 
     # Load our core packages
@@ -43,12 +41,12 @@ end
     import Images, ImageFiltering
     import FileIO
     using LinearAlgebra
-
-    # Load some demo packages
-    using OrdinaryDiffEq
     
     # Load some utilities that we'll use
     include("utils.jl")
+end
 
-    # TODO: Precompile some things?
+# Warm things up
+@sync for w in procs()
+    Dagger.@spawn scope=Dagger.scope(worker=w, threads=:) 1+1
 end
