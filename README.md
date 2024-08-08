@@ -2,6 +2,8 @@
 
 JuliaCon 2024
 
+The workshop recording is live on YouTube! [https://youtu.be/ENq05cxw1eY?si=sMNrrVgRrc8CzLyk](https://youtu.be/ENq05cxw1eY?si=sMNrrVgRrc8CzLyk)
+
 July 9th, 09:00–12:00 (Europe/Amsterdam), TU-Eindhoven 1.350 
 
 - *Julian P Samaroo* - JuliaLab @ Massachusetts Institute of Technology
